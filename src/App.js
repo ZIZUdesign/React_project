@@ -10,6 +10,7 @@ function App() {
       <ExpenseItem></ExpenseItem>
       <ExpenseItem></ExpenseItem>
       <ExpenseItem></ExpenseItem>
+      <ExpenseItem></ExpenseItem>
     </div>
   );
 }
