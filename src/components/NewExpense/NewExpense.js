@@ -4,16 +4,18 @@ import ExpenseForm from "./ExpenseForm";
 import './NewExpense.css';
 
 
-const NewExpense = () => {
+const NewExpense = (props) => {
     
     const onSaveExpenseDataHandler = (enteredExpenseData) => {
         const expenseData = {
             ...enteredExpenseData,
-            id: Math.rondom().toString()
+            id: Math.random().toString()
         };
-        console.log(expenseData); 
+        
+        props.onAddExpense(expenseData);
     };
   return <div className="new-expense">
+      {/* // a data is transferred through the method onSaveExpenseData */}
   <ExpenseForm onSaveExpenseData={onSaveExpenseDataHandler} /> 
   </div>
 };
